@@ -1,5 +1,7 @@
-import { runCity } from "./functions/getData";
+import { display } from "./functions/dom";
+import { latLon } from "./functions/getData";
+
 import "./normalize.css";
 import "./style.css";
 
-runCity();
+display(latLon("nashville"));

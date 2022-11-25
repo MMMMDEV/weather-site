@@ -8,6 +8,92 @@
     <script src="main.js" defer></script>
   </head>
   <body>
-    <p></p>
+    <div class="top">
+      <img
+        class="imgBackground"
+        id="imgBackground1"
+        src="../src/images/wolf-zimmermann-6sf5rf8QYFE-unsplash.jpg"
+        alt="a big cloud in the sky"
+      />
+      <img
+        class="imgBackground"
+        id="imgBackground2"
+        src="../src/images/philipp-pilz-orzc5mDgqP8-unsplash.jpg"
+        alt="a seal poikng its head out of the ocean"
+      />
+      <img
+        class="imgBackground"
+        id="imgBackground3"
+        src="../src/images/noah-dustin-von-weissenfluh-DJwpx9FpVQ4-unsplash.jpg"
+        alt="sun rising over some mountains"
+      />
+      <div class="overlay"></div>
+      <h1 class="cityName" id="cityName"></h1>
+      <div class="temperatureDiv">
+        <p class="temperature" id="temperature"></p>
+        <p class="temperatureSign" id="temperatureSign">°F</p>
+        <img
+          class="iconWeatherTop"
+          id="iconWeatherTop1"
+          src="../src/images/clouds.png"
+          alt="clouds icon"
+        />
+        <img
+          class="iconWeatherTop"
+          id="iconWeatherTop2"
+          src="../src/images/rain.png"
+          alt="rain clouds icon"
+        />
+        <img
+          class="iconWeatherTop"
+          id="iconWeatherTop3"
+          src="../src/images/sun.png"
+          alt="sun icon"
+        />
+      </div>
+      <div class="searchDiv">
+        <form action="#" id="searchForm">
+          <input class="cityInput" id="cityInput" type="text" />
+          <button type="submit" id="searchBtn">
+            <img
+              class="iconSearch"
+              src="../src/images/search.png"
+              alt="Search icon"
+            />
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="day-div">
+        <div class="day1 day" id="day1">
+          <div class="leftDay">
+            <div class="date1" id="date1"></div>
+            <div class="dayLetter1" id="dayLetter1"></div>
+            <img class="iconDay1" id="iconDay1" src="" alt="" />
+          </div>
+          <div class="rightDay">
+            <div class="tempH" id="tempH"></div>
+            <div class="slash">/</div>
+            <div class="tempL" id="tempL"></div>
+          </div>
+        </div>
+        <div class="day2 day" id="day1"></div>
+        <div class="day3 day" id="day1"></div>
+        <div class="day4 day" id="day1"></div>
+        <div class="day5 day" id="day1"></div>
+        <div class="day6 day" id="day1"></div>
+        <div class="day7 day" id="day1"></div>
+      </div>
+      <div class="spacer"></div>
+      <div class="extra-info-div">
+        <div class="info feels-like"></div>
+        <div class="info humidity"></div>
+        <div class="info pressure"></div>
+        <div class="info visibility"></div>
+        <div class="info wind"></div>
+        <div class="info main"></div>
+      </div>
+    </div>
   </body>
 </html>
