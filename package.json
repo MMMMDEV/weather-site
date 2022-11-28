@@ -33,6 +33,7 @@
   "dependencies": {
     "assert": "^2.0.0",
     "buffer": "^6.0.3",
-    "date-fns": "^2.29.3"
+    "date-fns": "^2.29.3",
+    "luxon": "^3.1.0"
   }
 }

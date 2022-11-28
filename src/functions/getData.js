@@ -1,4 +1,5 @@
 import { format, addDays } from "date-fns";
+import { DateTime } from "luxon";
 
 async function getlat(city) {
   try {
@@ -52,22 +53,30 @@ export async function getTodayData(lat, lon) {
     );
     const responseJson = await response.json();
 
+    const sunset = DateTime.fromSeconds(
+      responseJson.sys.sunrise
+    ).toLocaleString({ hour: "2-digit", minute: "2-digit" });
+
     const data = {
-      feelsLike: responseJson.main.feels_like,
+      feelsLike: Math.round(responseJson.main.feels_like),
       humidity: responseJson.main.humidity,
       pressure: responseJson.main.pressure,
-      temp: responseJson.main.temp,
-      tempMax: responseJson.main.temp_max,
-      tempMin: responseJson.main.temp_min,
-      visibility: responseJson.visibility,
-      description: responseJson.weather[0].description,
+      temp: Math.round(responseJson.main.temp),
+      tempMax: Math.round(responseJson.main.temp_max),
+      tempMin: Math.round(responseJson.main.temp_min),
       main: responseJson.weather[0].main,
-      wind: responseJson.wind.speed,
       name: responseJson.name,
       Date: format(new Date(), "d"),
       DayText: format(new Date(), "E"),
+      sunrise: DateTime.fromSeconds(responseJson.sys.sunrise).toLocaleString({
+        hour: "2-digit",
+        minute: "2-digit",
+      }),
+      sunset: DateTime.fromSeconds(responseJson.sys.sunset).toLocaleString({
+        hour: "2-digit",
+        minute: "2-digit",
+      }),
     };
-
     return data;
   } catch (err) {
     console.log("somehting went wrong", err);
@@ -85,20 +94,17 @@ export async function getData(lat, lon, dayN) {
     );
     const responseJson = await response.json();
 
+    const date = DateTime.fromSeconds(responseJson.list[dayN].dt);
+
     const data = {
-      feelsLike: responseJson.list[dayN].main.feels_like,
-      humidity: responseJson.list[dayN].main.humidity,
-      pressure: responseJson.list[dayN].main.pressure,
-      temp: responseJson.list[dayN].main.temp,
-      tempMax: responseJson.list[dayN].main.temp_max,
-      tempMin: responseJson.list[dayN].main.temp_min,
-      visibility: responseJson.list[dayN].visibility,
+      temp: Math.round(responseJson.list[dayN].main.temp),
+      tempMax: Math.round(responseJson.list[dayN].main.temp_max),
+      tempMin: Math.round(responseJson.list[dayN].main.temp_min),
       description: responseJson.list[dayN].weather[0].description,
       main: responseJson.list[dayN].weather[0].main,
-      wind: responseJson.list[dayN].wind.speed,
       name: responseJson.city.name,
-      Date: format(new Date(responseJson.list[dayN].dt_txt), "d"),
-      DayText: format(new Date(responseJson.list[dayN].dt_txt), "E"),
+      Date: date.toLocaleString({ day: "numeric" }),
+      DayText: date.toLocaleString({ weekday: "short" }),
     };
     return data;
   } catch (err) {
@@ -107,11 +113,10 @@ export async function getData(lat, lon, dayN) {
 }
 
 export const days = {
-  day3: format(addDays(new Date(), 2), "yyyy-MM-dd 00:00:00"),
-  day4: format(addDays(new Date(), 3), "yyyy-MM-dd 00:00:00"),
-  day5: format(addDays(new Date(), 4), "yyyy-MM-dd 00:00:00"),
-  day6: format(addDays(new Date(), 5), "yyyy-MM-dd 00:00:00"),
-  day7: format(addDays(new Date(), 6), "yyyy-MM-dd 00:00:00"),
+  day2: format(addDays(new Date(), 2), "yyyy-MM-dd 00:00:00"),
+  day3: format(addDays(new Date(), 3), "yyyy-MM-dd 00:00:00"),
+  day4: format(addDays(new Date(), 4), "yyyy-MM-dd 00:00:00"),
+  day5: format(addDays(new Date(), 5), "yyyy-MM-dd 00:00:00"),
 };
 
 export async function getDays(data, dayN) {
@@ -135,4 +140,9 @@ export async function getDays(data, dayN) {
   } catch {
     console.log("Day Not Found");
   }
+}
+
+export function getTempUnit(temp) {
+  // prettier-ignore
+  return Math.round((temp - 32) * 0.5556);
 }
