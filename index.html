@@ -27,6 +27,12 @@
         src="../src/images/philipp-pilz-orzc5mDgqP8-unsplash.jpg"
         alt="a seal poikng its head out of the ocean"
       />
+      <img
+        class="imgBackground"
+        id="imgBackground4"
+        src="../src/images/marita-kavelashvili-ugnrXk1129g-unsplash.jpg"
+        alt="a forest hidden in mist"
+      />
       <div class="overlay"></div>
       <h1 class="cityName" id="cityName"></h1>
       <div class="temperatureDiv">
@@ -48,6 +54,12 @@
           class="iconWeatherTop"
           id="iconWeatherTop3"
           src="../src/images/rain.png"
+          alt="rain clouds icon"
+        />
+        <img
+          class="iconWeatherTop"
+          id="iconWeatherTop4"
+          src="../src/images/fog.png"
           alt="rain clouds icon"
         />
       </div>
@@ -88,6 +100,12 @@
               src="../src/images/rain.png"
               alt="rain icon"
             />
+            <img
+              class="iconDay"
+              id="iconDay104"
+              src="../src/images/fog.png"
+              alt="fog clouds icon"
+            />
           </div>
           <div class="rightDay">
             <div class="tempH" id="tempH101"></div>
@@ -116,6 +134,12 @@
               id="iconDay203"
               src="../src/images/rain.png"
               alt="rain icon"
+            />
+            <img
+              class="iconDay"
+              id="iconDay204"
+              src="../src/images/fog.png"
+              alt="fog clouds icon"
             />
           </div>
           <div class="rightDay">
@@ -146,6 +170,12 @@
               src="../src/images/rain.png"
               alt="rain icon"
             />
+            <img
+              class="iconDay"
+              id="iconDay304"
+              src="../src/images/fog.png"
+              alt="fog clouds icon"
+            />
           </div>
           <div class="rightDay">
             <div class="tempH" id="tempH301"></div>
@@ -174,6 +204,12 @@
               id="iconDay403"
               src="../src/images/rain.png"
               alt="rain icon"
+            />
+            <img
+              class="iconDay"
+              id="iconDay404"
+              src="../src/images/fog.png"
+              alt="fog clouds icon"
             />
           </div>
           <div class="rightDay">
@@ -204,6 +240,12 @@
               src="../src/images/rain.png"
               alt="rain icon"
             />
+            <img
+              class="iconDay"
+              id="iconDay504"
+              src="../src/images/fog.png"
+              alt="fog clouds icon"
+            />
           </div>
           <div class="rightDay">
             <div class="tempH" id="tempH501"></div>
@@ -211,73 +253,45 @@
             <div class="tempL" id="tempL501"></div>
           </div>
         </div>
-        <div class="day day6">
-          <div class="leftDay">
-            <div class="date" id="date601"></div>
-            <div class="dayLetter" id="dayLetter601"></div>
-            <img
-              class="iconDay"
-              id="iconDay601"
-              src="../src/images/clouds.png"
-              alt="cloud icon"
-            />
-            <img
-              class="iconDay"
-              id="iconDay602"
-              src="../src/images/sun.png"
-              alt="sun icon"
-            />
-            <img
-              class="iconDay"
-              id="iconDay603"
-              src="../src/images/rain.png"
-              alt="rain icon"
-            />
-          </div>
-          <div class="rightDay">
-            <div class="tempH" id="tempH601"></div>
-            <div class="slash">/</div>
-            <div class="tempL" id="tempL601"></div>
-          </div>
-        </div>
-        <div class="day day7">
-          <div class="leftDay">
-            <div class="date" id="date701"></div>
-            <div class="dayLetter" id="dayLetter701"></div>
-            <img
-              class="iconDay"
-              id="iconDay701"
-              src="../src/images/clouds.png"
-              alt="cloud icon"
-            />
-            <img
-              class="iconDay"
-              id="iconDay702"
-              src="../src/images/sun.png"
-              alt="sun icon"
-            />
-            <img
-              class="iconDay"
-              id="iconDay703"
-              src="../src/images/rain.png"
-              alt="rain icon"
-            />
-          </div>
-          <div class="rightDay">
-            <div class="tempH" id="tempH701"></div>
-            <div class="slash">/</div>
-            <div class="tempL" id="tempL701"></div>
-          </div>
-        </div>
       </div>
       <div class="spacer"></div>
       <div class="extra-info-div">
-        <div class="info feels-like"></div>
-        <div class="info humidity"></div>
-        <div class="info pressure"></div>
-        <div class="info visibility"></div>
-        <div class="info wind"></div>
-        <div class="info main"></div>
+        <div class="info feels-like">
+          <div class="left-info">
+            <p>Feels Like</p>
+          </div>
+          <div class="right-info" id="feelsLikeP"></div>
+        </div>
+        <div class="info main">
+          <div class="left-info">
+            <p>Sky</p>
+          </div>
+          <div class="right-info" id="skyP"></div>
+        </div>
+        <div class="info sunrise">
+          <div class="left-info">
+            <p>Sunrise</p>
+          </div>
+          <div class="right-info" id="sunriseP"></div>
+        </div>
+        <div class="info sunset">
+          <div class="left-info">
+            <p>Sunset</p>
+          </div>
+          <div class="right-info" id="sunsetP"></div>
+        </div>
+        <div class="info humidity">
+          <div class="left-info">
+            <p>Humidity</p>
+          </div>
+          <div class="right-info" id="humidityP"></div>
+        </div>
+        <div class="info pressure">
+          <div class="left-info">
+            <p>Pressure</p>
+          </div>
+          <div class="right-info" id="pressureP"></div>
+        </div>
       </div>
     </div>
   </body>
