@@ -1,8 +1,14 @@
+@font-face {
+  font-family: "Poppins";
+  src: url(./fonts/Poppins-Regular.ttf);
+}
+
 :root {
   --body-color: #333333;
-  --white-color: rgb(243, 243, 243);
+  --white-color: #f3f3f3;
   --top-height: 30vh;
-  --temperature-top-width: 55px;
+  --bottom-height: 85vh;
+  --temperature-top-width: 30px;
   --temperature-top-sign: 20px;
   --day-date-width: 30px;
 }
@@ -27,6 +33,15 @@ body {
   background-color: var(--body-color);
 }
 
+.mainD {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--body-color);
+}
+
 /* top */
 
 .top {
@@ -40,6 +55,9 @@ body {
   color: var(--white-color);
   background-color: grey;
   padding-bottom: 1.9rem;
+  font-family: "Poppins";
+  gap: 0.2rem;
+  transition: 0.5s ease-in-out;
 }
 
 .imgBackground {
@@ -70,38 +88,47 @@ body {
 
 .temperatureDiv {
   width: 100%;
+  height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  gap: 0.3rem;
-}
-
-.temperatureDiv p {
-  margin: 10px 0px;
 }
 
 .temperature {
   width: var(--temperature-top-width);
   font-size: 1.3rem;
   text-align: center;
+  position: absolute;
+  right: calc(50% + 10px);
 }
 
 .temperatureSign {
   width: var(--temperature-top-sign);
   font-size: 1.1rem;
   text-align: center;
+  cursor: pointer;
 }
 
 .iconWeatherTop {
-  width: 25px;
+  width: 22px;
   position: absolute;
-  left: calc(50% + var(--temperature-top-width));
   opacity: 0;
+  left: calc(50% + 25px);
 }
 
 .iconActive {
   opacity: 1;
+}
+
+form {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
 }
 
 .searchDiv {
@@ -113,15 +140,36 @@ body {
   gap: 1rem;
 }
 
+.cityInput {
+  width: 120px;
+  height: 25px;
+  border: 0px solid transparent;
+  border-bottom: 1px solid var(--white-color);
+  background-color: transparent;
+  color: var(--white-color);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+#searchBtn {
+  width: 30px;
+  height: 30px;
+  border: 0px solid transparent;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .iconSearch {
-  width: 25px;
+  width: 22px;
+  color: var(--white-color);
 }
 
 /* bottom */
 
 .bottom {
   width: 100%;
-  height: 110vh;
+  height: var(--bottom-height);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -132,11 +180,14 @@ body {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   background-color: #333333;
+  font-family: "Poppins";
+  font-size: 1.1rem;
+  transition: 0.5s ease-in-out;
 }
 
 .day-div {
   width: 100%;
-  height: 60%;
+  height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,18 +196,19 @@ body {
 
 .day {
   width: 100%;
-  height: 20%;
+  height: 16%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0px 20px;
   color: var(--white-color);
+  transition: 0.5s ease-in-out;
 }
 
 .iconDay {
-  width: 25px;
+  width: 22px;
   position: absolute;
-  left: calc((var(--day-date-width) * 2) + 35px);
+  left: calc((var(--day-date-width) * 2) + 40px);
   opacity: 0;
 }
 
@@ -170,10 +222,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-}
-
-.date {
-  width: var(--day-date-width);
+  gap: 20px;
 }
 
 .dayLetter {
@@ -188,13 +237,13 @@ body {
 #iconDay101,
 #iconDay102,
 #iconDay103 {
-  left: calc((var(--day-date-width) * 3) + 10px);
+  left: calc((var(--day-date-width) * 3) + 35px);
 }
 
 #iconDay201,
 #iconDay202,
 #iconDay203 {
-  left: calc((var(--day-date-width) * 4) + 10px);
+  left: calc((var(--day-date-width) * 4) + 35px);
 }
 
 .rightDay {
@@ -218,15 +267,23 @@ body {
 
 .extra-info-div {
   width: 100%;
-  height: 40%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  color: var(--white-color);
 }
 
 .info {
   width: 100%;
+  height: 13%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0px 20px;
+  transition: 0.5s ease-in-out;
 }
 
 .left-info {
@@ -241,4 +298,461 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+a,
+a:visited {
+  color: var(--white-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* mobile landscape */
+
+@media only screen and (width > 500px) and (height < 500px) {
+  :root {
+    --top-height: 100vh;
+  }
+
+  .mainD {
+    height: 160vh;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: row;
+  }
+
+  .top {
+    width: 40%;
+    position: sticky;
+    right: 60%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    color: var(--white-color);
+    background-color: var(--body-color);
+    padding-bottom: 0px;
+    font-family: "Poppins";
+    gap: 0.2rem;
+  }
+
+  .overlay {
+    height: 100vh;
+    border-radius: 0px 20px 20px 0px;
+  }
+
+  .imgBackground {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0px 20px 20px 0px;
+  }
+
+  .bottom {
+    width: 60%;
+    height: 160vh;
+    top: 0;
+    position: relative;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    background-color: #333333;
+  }
+
+  .day-div {
+    height: 45%;
+  }
+
+  .day {
+    height: 18%;
+  }
+
+  .extra-info-div {
+    height: 55%;
+  }
+}
+
+/* tablet portrait */
+
+@media only screen and (width > 500px) and (height > 850px) {
+  .cityName {
+    font-size: 3rem;
+  }
+
+  .temperatureDiv {
+    height: 50px;
+  }
+
+  .temperature {
+    font-size: 2.3rem;
+    right: calc(50% + 30px);
+  }
+
+  .temperatureSign {
+    font-size: 1.8rem;
+  }
+
+  .iconWeatherTop {
+    width: 30px;
+    left: calc(50% + 35px);
+  }
+
+  .cityInput {
+    width: 180px;
+    font-size: 1.8rem;
+  }
+
+  #searchBtn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .iconSearch {
+    width: 28px;
+  }
+
+  .spacer {
+    height: 5px;
+  }
+
+  .bottom {
+    font-size: 1.7rem;
+  }
+
+  .day {
+    padding: 0px 40px;
+  }
+
+  .iconDay {
+    width: 26px;
+    left: calc(var(--day-date-width) * 4.5);
+  }
+
+  #iconDay101,
+  #iconDay102,
+  #iconDay103 {
+    left: calc((var(--day-date-width) * 5) + 40px);
+  }
+
+  #iconDay201,
+  #iconDay202,
+  #iconDay203 {
+    left: calc((var(--day-date-width) * 6) + 65px);
+  }
+
+  #dayLetter101,
+  #dayLetter201 {
+    width: calc(var(--day-date-width) * 5);
+  }
+
+  .info {
+    padding: 0px 40px;
+  }
+}
+
+/* tablet landscape */
+
+@media only screen and (width > 700px) and (920px > height > 500px) {
+  :root {
+    --top-height: 100vh;
+  }
+
+  .mainD {
+    height: 110vh;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: row;
+  }
+
+  .top {
+    width: 40%;
+    position: sticky;
+    right: 60%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    color: var(--white-color);
+    background-color: var(--body-color);
+    padding-bottom: 0px;
+    font-family: "Poppins";
+    gap: 0.2rem;
+  }
+
+  .overlay {
+    height: 100vh;
+    border-radius: 0px 20px 20px 0px;
+  }
+
+  .imgBackground {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0px 20px 20px 0px;
+  }
+
+  .cityName {
+    font-size: 3rem;
+  }
+
+  .temperatureDiv {
+    height: 50px;
+  }
+
+  .temperature {
+    font-size: 2.3rem;
+    right: calc(50% + 30px);
+  }
+
+  .temperatureSign {
+    font-size: 1.8rem;
+  }
+
+  .iconWeatherTop {
+    width: 30px;
+    left: calc(50% + 35px);
+  }
+
+  .cityInput {
+    width: 180px;
+    font-size: 1.8rem;
+  }
+
+  #searchBtn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .iconSearch {
+    width: 28px;
+  }
+
+  .bottom {
+    width: 60%;
+    height: 110vh;
+    top: 0;
+    position: relative;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    background-color: #333333;
+    font-size: 1.8rem;
+  }
+
+  .day-div {
+    height: 45%;
+  }
+
+  .day {
+    height: 18%;
+    padding: 0px 40px;
+  }
+
+  .extra-info-div {
+    height: 55%;
+  }
+
+  .iconDay {
+    width: 26px;
+    left: calc(var(--day-date-width) * 5);
+  }
+
+  #iconDay101,
+  #iconDay102,
+  #iconDay103 {
+    left: calc((var(--day-date-width) * 5) + 50px);
+  }
+
+  #iconDay201,
+  #iconDay202,
+  #iconDay203 {
+    left: calc((var(--day-date-width) * 6) + 75px);
+  }
+
+  #dayLetter101,
+  #dayLetter201 {
+    width: calc(var(--day-date-width) * 5);
+  }
+
+  .info {
+    padding: 0px 40px;
+  }
+}
+
+/* desktop portrait */
+
+@media only screen and (width > 920px) and (height > 1000px) {
+  .mainD {
+    height: 70vh;
+  }
+
+  .iconWeatherTop {
+    width: 30px;
+    left: calc(50% + 35px);
+  }
+
+  .bottom {
+    height: 70vh;
+    font-size: 1.7rem;
+  }
+
+  .iconDay {
+    width: 26px;
+    left: calc(var(--day-date-width) * 7);
+  }
+
+  .spacer {
+    height: 8px;
+  }
+
+  .day-div {
+    padding: 0px 60px;
+  }
+
+  #iconDay101,
+  #iconDay102,
+  #iconDay103 {
+    left: calc((var(--day-date-width) * 6) + 70px);
+  }
+
+  #iconDay201,
+  #iconDay202,
+  #iconDay203 {
+    left: calc((var(--day-date-width) * 7) + 90px);
+  }
+
+  #dayLetter101,
+  #dayLetter201 {
+    width: calc(var(--day-date-width) * 5);
+  }
+
+  .info {
+    padding: 0px 80px;
+  }
+}
+
+/* desktop landscape */
+
+@media only screen and (width > 1600px) and (height > 500px) {
+  :root {
+    --top-height: 100vh;
+  }
+
+  .mainD {
+    height: 100vh;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: row;
+  }
+
+  .top {
+    width: 40%;
+    position: sticky;
+    right: 60%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    color: var(--white-color);
+    background-color: var(--body-color);
+    padding-bottom: 0px;
+    font-family: "Poppins";
+    gap: 2rem;
+  }
+
+  .overlay {
+    height: 100vh;
+    border-radius: 0px 80px 80px 0px;
+  }
+
+  .imgBackground {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0px 80px 80px 0px;
+  }
+
+  .cityName {
+    font-size: 4rem;
+  }
+
+  .temperatureDiv {
+    height: 60px;
+  }
+
+  .temperature {
+    font-size: 2.8rem;
+    right: calc(50% + 40px);
+  }
+
+  .temperatureSign {
+    font-size: 2.2rem;
+  }
+
+  .iconWeatherTop {
+    width: 50px;
+    left: calc(50% + 55px);
+  }
+
+  .cityInput {
+    width: 180px;
+    height: 50px;
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  #searchBtn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .iconSearch {
+    width: 35px;
+  }
+
+  .spacer {
+    height: 8px;
+  }
+
+  .bottom {
+    width: 60%;
+    height: 100vh;
+    top: 0;
+    position: relative;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    background-color: #333333;
+    font-size: 2rem;
+  }
+
+  .day-div {
+    height: 45%;
+    padding: 0px 60px;
+  }
+
+  .day {
+    height: 18%;
+  }
+
+  .extra-info-div {
+    height: 55%;
+  }
+
+  .iconDay {
+    width: 35px;
+    left: calc(var(--day-date-width) * 7);
+  }
+
+  #iconDay101,
+  #iconDay102,
+  #iconDay103 {
+    left: calc((var(--day-date-width) * 7) + 65px);
+  }
+
+  #iconDay201,
+  #iconDay202,
+  #iconDay203 {
+    left: calc((var(--day-date-width) * 8) + 100px);
+  }
+
+  #dayLetter101,
+  #dayLetter201 {
+    width: calc(var(--day-date-width) * 5);
+  }
+
+  .info {
+    padding: 0px 100px;
+  }
 }
