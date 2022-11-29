@@ -8,289 +8,304 @@
     <script src="main.js" defer></script>
   </head>
   <body>
-    <div class="top">
-      <img
-        class="imgBackground"
-        id="imgBackground1"
-        src="../src/images/wolf-zimmermann-6sf5rf8QYFE-unsplash.jpg"
-        alt="a big cloud in the sky"
-      />
-      <img
-        class="imgBackground"
-        id="imgBackground2"
-        src="../src/images/noah-dustin-von-weissenfluh-DJwpx9FpVQ4-unsplash.jpg"
-        alt="sun rising over some mountains"
-      />
-      <img
-        class="imgBackground"
-        id="imgBackground3"
-        src="../src/images/philipp-pilz-orzc5mDgqP8-unsplash.jpg"
-        alt="a seal poikng its head out of the ocean"
-      />
-      <img
-        class="imgBackground"
-        id="imgBackground4"
-        src="../src/images/marita-kavelashvili-ugnrXk1129g-unsplash.jpg"
-        alt="a forest hidden in mist"
-      />
-      <div class="overlay"></div>
-      <h1 class="cityName" id="cityName"></h1>
-      <div class="temperatureDiv">
-        <p class="temperature" id="temperature"></p>
-        <p class="temperatureSign" id="temperatureSign">°F</p>
+    <div class="mainD">
+      <div class="top">
         <img
-          class="iconWeatherTop"
-          id="iconWeatherTop1"
-          src="../src/images/clouds.png"
-          alt="clouds icon"
+          class="imgBackground"
+          id="imgBackground1"
+          src="../src/images/wolf-zimmermann-6sf5rf8QYFE-unsplash.jpg"
+          alt="a big cloud in the sky"
         />
         <img
-          class="iconWeatherTop"
-          id="iconWeatherTop2"
-          src="../src/images/sun.png"
-          alt="sun icon"
+          class="imgBackground"
+          id="imgBackground2"
+          src="../src/images/noah-dustin-von-weissenfluh-DJwpx9FpVQ4-unsplash.jpg"
+          alt="sun rising over some mountains"
         />
         <img
-          class="iconWeatherTop"
-          id="iconWeatherTop3"
-          src="../src/images/rain.png"
-          alt="rain clouds icon"
+          class="imgBackground"
+          id="imgBackground3"
+          src="../src/images/philipp-pilz-orzc5mDgqP8-unsplash.jpg"
+          alt="a seal poikng its head out of the ocean"
         />
         <img
-          class="iconWeatherTop"
-          id="iconWeatherTop4"
-          src="../src/images/fog.png"
-          alt="rain clouds icon"
+          class="imgBackground"
+          id="imgBackground4"
+          src="../src/images/marita-kavelashvili-ugnrXk1129g-unsplash.jpg"
+          alt="a forest hidden in mist"
         />
-      </div>
-      <div class="searchDiv">
-        <form action="#" id="searchForm">
-          <input class="cityInput" id="cityInput" type="text" />
-          <button type="submit" id="searchBtn">
-            <img
-              class="iconSearch"
-              src="../src/images/search.png"
-              alt="Search icon"
-            />
-          </button>
-        </form>
-      </div>
-    </div>
-    <div class="bottom">
-      <div class="day-div">
-        <div class="day day1">
-          <div class="leftDay">
-            <div class="date" id="date101"></div>
-            <div class="dayLetter" id="dayLetter101"></div>
-            <img
-              class="iconDay"
-              id="iconDay101"
-              src="../src/images/clouds.png"
-              alt="cloud icon"
-            />
-            <img
-              class="iconDay"
-              id="iconDay102"
-              src="../src/images/sun.png"
-              alt="sun icon"
-            />
-            <img
-              class="iconDay"
-              id="iconDay103"
-              src="../src/images/rain.png"
-              alt="rain icon"
-            />
-            <img
-              class="iconDay"
-              id="iconDay104"
-              src="../src/images/fog.png"
-              alt="fog clouds icon"
-            />
-          </div>
-          <div class="rightDay">
-            <div class="tempH" id="tempH101"></div>
-            <div class="slash">/</div>
-            <div class="tempL" id="tempL101"></div>
-          </div>
+        <div class="overlay"></div>
+        <h1 class="cityName" id="cityName"></h1>
+        <div class="temperatureDiv">
+          <p class="temperature" id="temperature"></p>
+          <p class="temperatureSign" id="temperatureSign">°F</p>
+          <img
+            class="iconWeatherTop"
+            id="iconWeatherTop1"
+            src="../src/images/clouds.png"
+            alt="clouds icon"
+          />
+          <img
+            class="iconWeatherTop"
+            id="iconWeatherTop2"
+            src="../src/images/sun.png"
+            alt="sun icon"
+          />
+          <img
+            class="iconWeatherTop"
+            id="iconWeatherTop3"
+            src="../src/images/rain.png"
+            alt="rain clouds icon"
+          />
+          <img
+            class="iconWeatherTop"
+            id="iconWeatherTop4"
+            src="../src/images/fog.png"
+            alt="rain clouds icon"
+          />
         </div>
-        <div class="day day2">
-          <div class="leftDay">
-            <div class="date" id="date201"></div>
-            <div class="dayLetter" id="dayLetter201"></div>
-            <img
-              class="iconDay"
-              id="iconDay201"
-              src="../src/images/clouds.png"
-              alt="cloud icon"
+        <div class="searchDiv">
+          <form action="#" id="searchForm">
+            <input
+              class="cityInput"
+              id="cityInput"
+              type="text"
+              placeholder="City..."
             />
-            <img
-              class="iconDay"
-              id="iconDay202"
-              src="../src/images/sun.png"
-              alt="sun icon"
-            />
-            <img
-              class="iconDay"
-              id="iconDay203"
-              src="../src/images/rain.png"
-              alt="rain icon"
-            />
-            <img
-              class="iconDay"
-              id="iconDay204"
-              src="../src/images/fog.png"
-              alt="fog clouds icon"
-            />
-          </div>
-          <div class="rightDay">
-            <div class="tempH" id="tempH201"></div>
-            <div class="slash">/</div>
-            <div class="tempL" id="tempL201"></div>
-          </div>
-        </div>
-        <div class="day day3">
-          <div class="leftDay">
-            <div class="date" id="date301"></div>
-            <div class="dayLetter" id="dayLetter301"></div>
-            <img
-              class="iconDay"
-              id="iconDay301"
-              src="../src/images/clouds.png"
-              alt="cloud icon"
-            />
-            <img
-              class="iconDay"
-              id="iconDay302"
-              src="../src/images/sun.png"
-              alt="sun icon"
-            />
-            <img
-              class="iconDay"
-              id="iconDay303"
-              src="../src/images/rain.png"
-              alt="rain icon"
-            />
-            <img
-              class="iconDay"
-              id="iconDay304"
-              src="../src/images/fog.png"
-              alt="fog clouds icon"
-            />
-          </div>
-          <div class="rightDay">
-            <div class="tempH" id="tempH301"></div>
-            <div class="slash">/</div>
-            <div class="tempL" id="tempL301"></div>
-          </div>
-        </div>
-        <div class="day day4">
-          <div class="leftDay">
-            <div class="date" id="date401"></div>
-            <div class="dayLetter" id="dayLetter401"></div>
-            <img
-              class="iconDay"
-              id="iconDay401"
-              src="../src/images/clouds.png"
-              alt="cloud icon"
-            />
-            <img
-              class="iconDay"
-              id="iconDay402"
-              src="../src/images/sun.png"
-              alt="sun icon"
-            />
-            <img
-              class="iconDay"
-              id="iconDay403"
-              src="../src/images/rain.png"
-              alt="rain icon"
-            />
-            <img
-              class="iconDay"
-              id="iconDay404"
-              src="../src/images/fog.png"
-              alt="fog clouds icon"
-            />
-          </div>
-          <div class="rightDay">
-            <div class="tempH" id="tempH401"></div>
-            <div class="slash">/</div>
-            <div class="tempL" id="tempL401"></div>
-          </div>
-        </div>
-        <div class="day day5">
-          <div class="leftDay">
-            <div class="date" id="date501"></div>
-            <div class="dayLetter" id="dayLetter501"></div>
-            <img
-              class="iconDay"
-              id="iconDay501"
-              src="../src/images/clouds.png"
-              alt="cloud icon"
-            />
-            <img
-              class="iconDay"
-              id="iconDay502"
-              src="../src/images/sun.png"
-              alt="sun icon"
-            />
-            <img
-              class="iconDay"
-              id="iconDay503"
-              src="../src/images/rain.png"
-              alt="rain icon"
-            />
-            <img
-              class="iconDay"
-              id="iconDay504"
-              src="../src/images/fog.png"
-              alt="fog clouds icon"
-            />
-          </div>
-          <div class="rightDay">
-            <div class="tempH" id="tempH501"></div>
-            <div class="slash">/</div>
-            <div class="tempL" id="tempL501"></div>
-          </div>
+            <button type="submit" id="searchBtn">
+              <img
+                class="iconSearch"
+                src="../src/images/search.png"
+                alt="Search icon"
+              />
+            </button>
+          </form>
         </div>
       </div>
-      <div class="spacer"></div>
-      <div class="extra-info-div">
-        <div class="info feels-like">
-          <div class="left-info">
-            <p>Feels Like</p>
+      <div class="bottom">
+        <div class="day-div">
+          <div class="day day1">
+            <div class="leftDay">
+              <div class="date" id="date101"></div>
+              <div class="dayLetter" id="dayLetter101"></div>
+              <img
+                class="iconDay"
+                id="iconDay101"
+                src="../src/images/clouds.png"
+                alt="cloud icon"
+              />
+              <img
+                class="iconDay"
+                id="iconDay102"
+                src="../src/images/sun.png"
+                alt="sun icon"
+              />
+              <img
+                class="iconDay"
+                id="iconDay103"
+                src="../src/images/rain.png"
+                alt="rain icon"
+              />
+              <img
+                class="iconDay"
+                id="iconDay104"
+                src="../src/images/fog.png"
+                alt="fog clouds icon"
+              />
+            </div>
+            <div class="rightDay">
+              <div class="tempH" id="tempH101"></div>
+              <div class="slash">/</div>
+              <div class="tempL" id="tempL101"></div>
+            </div>
           </div>
-          <div class="right-info" id="feelsLikeP"></div>
+          <div class="day day2">
+            <div class="leftDay">
+              <div class="date" id="date201"></div>
+              <div class="dayLetter" id="dayLetter201"></div>
+              <img
+                class="iconDay"
+                id="iconDay201"
+                src="../src/images/clouds.png"
+                alt="cloud icon"
+              />
+              <img
+                class="iconDay"
+                id="iconDay202"
+                src="../src/images/sun.png"
+                alt="sun icon"
+              />
+              <img
+                class="iconDay"
+                id="iconDay203"
+                src="../src/images/rain.png"
+                alt="rain icon"
+              />
+              <img
+                class="iconDay"
+                id="iconDay204"
+                src="../src/images/fog.png"
+                alt="fog clouds icon"
+              />
+            </div>
+            <div class="rightDay">
+              <div class="tempH" id="tempH201"></div>
+              <div class="slash">/</div>
+              <div class="tempL" id="tempL201"></div>
+            </div>
+          </div>
+          <div class="day day3">
+            <div class="leftDay">
+              <div class="date" id="date301"></div>
+              <div class="dayLetter" id="dayLetter301"></div>
+              <img
+                class="iconDay"
+                id="iconDay301"
+                src="../src/images/clouds.png"
+                alt="cloud icon"
+              />
+              <img
+                class="iconDay"
+                id="iconDay302"
+                src="../src/images/sun.png"
+                alt="sun icon"
+              />
+              <img
+                class="iconDay"
+                id="iconDay303"
+                src="../src/images/rain.png"
+                alt="rain icon"
+              />
+              <img
+                class="iconDay"
+                id="iconDay304"
+                src="../src/images/fog.png"
+                alt="fog clouds icon"
+              />
+            </div>
+            <div class="rightDay">
+              <div class="tempH" id="tempH301"></div>
+              <div class="slash">/</div>
+              <div class="tempL" id="tempL301"></div>
+            </div>
+          </div>
+          <div class="day day4">
+            <div class="leftDay">
+              <div class="date" id="date401"></div>
+              <div class="dayLetter" id="dayLetter401"></div>
+              <img
+                class="iconDay"
+                id="iconDay401"
+                src="../src/images/clouds.png"
+                alt="cloud icon"
+              />
+              <img
+                class="iconDay"
+                id="iconDay402"
+                src="../src/images/sun.png"
+                alt="sun icon"
+              />
+              <img
+                class="iconDay"
+                id="iconDay403"
+                src="../src/images/rain.png"
+                alt="rain icon"
+              />
+              <img
+                class="iconDay"
+                id="iconDay404"
+                src="../src/images/fog.png"
+                alt="fog clouds icon"
+              />
+            </div>
+            <div class="rightDay">
+              <div class="tempH" id="tempH401"></div>
+              <div class="slash">/</div>
+              <div class="tempL" id="tempL401"></div>
+            </div>
+          </div>
+          <div class="day day5">
+            <div class="leftDay">
+              <div class="date" id="date501"></div>
+              <div class="dayLetter" id="dayLetter501"></div>
+              <img
+                class="iconDay"
+                id="iconDay501"
+                src="../src/images/clouds.png"
+                alt="cloud icon"
+              />
+              <img
+                class="iconDay"
+                id="iconDay502"
+                src="../src/images/sun.png"
+                alt="sun icon"
+              />
+              <img
+                class="iconDay"
+                id="iconDay503"
+                src="../src/images/rain.png"
+                alt="rain icon"
+              />
+              <img
+                class="iconDay"
+                id="iconDay504"
+                src="../src/images/fog.png"
+                alt="fog clouds icon"
+              />
+            </div>
+            <div class="rightDay">
+              <div class="tempH" id="tempH501"></div>
+              <div class="slash">/</div>
+              <div class="tempL" id="tempL501"></div>
+            </div>
+          </div>
         </div>
-        <div class="info main">
-          <div class="left-info">
-            <p>Sky</p>
+        <div class="spacer"></div>
+        <div class="extra-info-div">
+          <div class="info feels-like">
+            <div class="left-info">
+              <p>Feels Like</p>
+            </div>
+            <div class="right-info" id="feelsLikeP"></div>
           </div>
-          <div class="right-info" id="skyP"></div>
-        </div>
-        <div class="info sunrise">
-          <div class="left-info">
-            <p>Sunrise</p>
+          <div class="info main">
+            <div class="left-info">
+              <p>Sky</p>
+            </div>
+            <div class="right-info" id="skyP"></div>
           </div>
-          <div class="right-info" id="sunriseP"></div>
-        </div>
-        <div class="info sunset">
-          <div class="left-info">
-            <p>Sunset</p>
+          <div class="info sunrise">
+            <div class="left-info">
+              <p>Sunrise</p>
+            </div>
+            <div class="right-info" id="sunriseP"></div>
           </div>
-          <div class="right-info" id="sunsetP"></div>
-        </div>
-        <div class="info humidity">
-          <div class="left-info">
-            <p>Humidity</p>
+          <div class="info sunset">
+            <div class="left-info">
+              <p>Sunset</p>
+            </div>
+            <div class="right-info" id="sunsetP"></div>
           </div>
-          <div class="right-info" id="humidityP"></div>
-        </div>
-        <div class="info pressure">
-          <div class="left-info">
-            <p>Pressure</p>
+          <div class="info humidity">
+            <div class="left-info">
+              <p>Humidity</p>
+            </div>
+            <div class="right-info" id="humidityP"></div>
           </div>
-          <div class="right-info" id="pressureP"></div>
+          <div class="info pressure">
+            <div class="left-info">
+              <p>Pressure</p>
+            </div>
+            <div class="right-info" id="pressureP"></div>
+          </div>
+          <div class="info">
+            <div class="left-info">
+              <p>Attributions</p>
+            </div>
+            <div class="right-info">
+              <a href="./links.html">Click Me!</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
