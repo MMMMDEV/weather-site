@@ -7,64 +7,178 @@ import {
   latLon,
 } from "./getData";
 
+import cloudimg from "../images/wolf-zimmermann-6sf5rf8QYFE-unsplash.jpg";
+import sunimg from "../images/noah-dustin-von-weissenfluh-DJwpx9FpVQ4-unsplash.jpg";
+import waterimg from "../images/philipp-pilz-orzc5mDgqP8-unsplash.jpg";
+import mistimg from "../images/marita-kavelashvili-ugnrXk1129g-unsplash.jpg";
+import cloudspng from "../images/clouds.png";
+import sunpng from "../images/sun.png";
+import rainpng from "../images/rain.png";
+import fogpng from "../images/fog.png";
+import searchpng from "../images/search.png";
+
+// imgs
+const imgBackground1 = new Image();
+imgBackground1.src = cloudimg;
+imgBackground1.classList.add("imgBackground");
+
+const imgBackground2 = new Image();
+imgBackground2.src = sunimg;
+imgBackground2.classList.add("imgBackground");
+
+const imgBackground3 = new Image();
+imgBackground3.src = waterimg;
+imgBackground3.classList.add("imgBackground");
+
+const imgBackground4 = new Image();
+imgBackground4.src = mistimg;
+imgBackground4.classList.add("imgBackground");
+
+const iconWeatherTop1 = new Image();
+iconWeatherTop1.src = cloudspng;
+iconWeatherTop1.classList.add("iconWeatherTop");
+
+const iconWeatherTop2 = new Image();
+iconWeatherTop2.src = sunpng;
+iconWeatherTop2.classList.add("iconWeatherTop");
+
+const iconWeatherTop3 = new Image();
+iconWeatherTop3.src = rainpng;
+iconWeatherTop3.classList.add("iconWeatherTop");
+
+const iconWeatherTop4 = new Image();
+iconWeatherTop4.src = fogpng;
+iconWeatherTop4.classList.add("iconWeatherTop");
+
+const iconSearch = new Image();
+iconSearch.src = searchpng;
+iconSearch.classList.add("iconSearch");
+
+const iconDay101 = new Image();
+iconDay101.src = cloudspng;
+iconDay101.classList.add("iconDay");
+iconDay101.classList.add("iconDay101");
+
+const iconDay102 = new Image();
+iconDay102.src = sunpng;
+iconDay102.classList.add("iconDay");
+iconDay102.classList.add("iconDay102");
+
+const iconDay103 = new Image();
+iconDay103.src = rainpng;
+iconDay103.classList.add("iconDay");
+iconDay103.classList.add("iconDay103");
+
+const iconDay104 = new Image();
+iconDay104.src = fogpng;
+iconDay104.classList.add("iconDay");
+iconDay104.classList.add("iconDay104");
+
+const iconDay201 = new Image();
+iconDay201.src = cloudspng;
+iconDay201.classList.add("iconDay");
+iconDay201.classList.add("iconDay201");
+
+const iconDay202 = new Image();
+iconDay202.src = sunpng;
+iconDay202.classList.add("iconDay");
+iconDay202.classList.add("iconDay202");
+
+const iconDay203 = new Image();
+iconDay203.src = rainpng;
+iconDay203.classList.add("iconDay");
+iconDay203.classList.add("iconDay203");
+
+const iconDay204 = new Image();
+iconDay204.src = fogpng;
+iconDay204.classList.add("iconDay");
+iconDay204.classList.add("iconDay204");
+
+const iconDay301 = new Image();
+iconDay301.src = cloudspng;
+iconDay301.classList.add("iconDay");
+
+const iconDay302 = new Image();
+iconDay302.src = sunpng;
+iconDay302.classList.add("iconDay");
+
+const iconDay303 = new Image();
+iconDay303.src = rainpng;
+iconDay303.classList.add("iconDay");
+
+const iconDay304 = new Image();
+iconDay304.src = fogpng;
+iconDay304.classList.add("iconDay");
+
+const iconDay401 = new Image();
+iconDay401.src = cloudspng;
+iconDay401.classList.add("iconDay");
+
+const iconDay402 = new Image();
+iconDay402.src = sunpng;
+iconDay402.classList.add("iconDay");
+
+const iconDay403 = new Image();
+iconDay403.src = rainpng;
+iconDay403.classList.add("iconDay");
+
+const iconDay404 = new Image();
+iconDay404.src = fogpng;
+iconDay404.classList.add("iconDay");
+
+const iconDay501 = new Image();
+iconDay501.src = cloudspng;
+iconDay501.classList.add("iconDay");
+
+const iconDay502 = new Image();
+iconDay502.src = sunpng;
+iconDay502.classList.add("iconDay");
+
+const iconDay503 = new Image();
+iconDay503.src = rainpng;
+iconDay503.classList.add("iconDay");
+
+const iconDay504 = new Image();
+iconDay504.src = fogpng;
+iconDay504.classList.add("iconDay");
+
 // top DOM
+const top = document.querySelector(".top");
 const cityName = document.querySelector("#cityName");
+const temperatureDiv = document.querySelector("#temperatureDiv");
 const temperature = document.querySelector("#temperature");
 const temperatureSign = document.querySelector("#temperatureSign");
-const iconWeatherTop1 = document.querySelector("#iconWeatherTop1");
-const iconWeatherTop2 = document.querySelector("#iconWeatherTop2");
-const iconWeatherTop3 = document.querySelector("#iconWeatherTop3");
-const iconWeatherTop4 = document.querySelector("#iconWeatherTop4");
-const imgBackground1 = document.querySelector("#imgBackground1");
-const imgBackground2 = document.querySelector("#imgBackground2");
-const imgBackground3 = document.querySelector("#imgBackground3");
-const imgBackground4 = document.querySelector("#imgBackground4");
 const cityInput = document.querySelector("#cityInput");
 const searchBtn = document.querySelector("#searchBtn");
 
 // bottom DOM
+const leftDay101 = document.querySelector("#leftDay101");
 const date101 = document.querySelector("#date101");
 const dayLetter101 = document.querySelector("#dayLetter101");
-const iconDay101 = document.querySelector("#iconDay101");
-const iconDay102 = document.querySelector("#iconDay102");
-const iconDay103 = document.querySelector("#iconDay103");
-const iconDay104 = document.querySelector("#iconDay104");
 const tempH101 = document.querySelector("#tempH101");
 const tempL101 = document.querySelector("#tempL101");
 
+const leftDay201 = document.querySelector("#leftDay201");
 const date201 = document.querySelector("#date201");
 const dayLetter201 = document.querySelector("#dayLetter201");
-const iconDay201 = document.querySelector("#iconDay201");
-const iconDay202 = document.querySelector("#iconDay202");
-const iconDay203 = document.querySelector("#iconDay203");
-const iconDay204 = document.querySelector("#iconDay204");
 const tempH201 = document.querySelector("#tempH201");
 const tempL201 = document.querySelector("#tempL201");
 
+const leftDay301 = document.querySelector("#leftDay301");
 const date301 = document.querySelector("#date301");
 const dayLetter301 = document.querySelector("#dayLetter301");
-const iconDay301 = document.querySelector("#iconDay301");
-const iconDay302 = document.querySelector("#iconDay302");
-const iconDay303 = document.querySelector("#iconDay303");
-const iconDay304 = document.querySelector("#iconDay304");
 const tempH301 = document.querySelector("#tempH301");
 const tempL301 = document.querySelector("#tempL301");
 
+const leftDay401 = document.querySelector("#leftDay401");
 const date401 = document.querySelector("#date401");
 const dayLetter401 = document.querySelector("#dayLetter401");
-const iconDay401 = document.querySelector("#iconDay401");
-const iconDay402 = document.querySelector("#iconDay402");
-const iconDay403 = document.querySelector("#iconDay403");
-const iconDay404 = document.querySelector("#iconDay404");
 const tempH401 = document.querySelector("#tempH401");
 const tempL401 = document.querySelector("#tempL401");
 
+const leftDay501 = document.querySelector("#leftDay501");
 const date501 = document.querySelector("#date501");
 const dayLetter501 = document.querySelector("#dayLetter501");
-const iconDay501 = document.querySelector("#iconDay501");
-const iconDay502 = document.querySelector("#iconDay502");
-const iconDay503 = document.querySelector("#iconDay503");
-const iconDay504 = document.querySelector("#iconDay504");
 const tempH501 = document.querySelector("#tempH501");
 const tempL501 = document.querySelector("#tempL501");
 
@@ -76,6 +190,37 @@ const sunrise = document.querySelector("#sunriseP");
 const sunset = document.querySelector("#sunsetP");
 const humidity = document.querySelector("#humidityP");
 const pressure = document.querySelector("#pressureP");
+
+// appending imgs
+top.insertAdjacentElement("afterbegin", imgBackground1);
+top.insertAdjacentElement("afterbegin", imgBackground2);
+top.insertAdjacentElement("afterbegin", imgBackground3);
+top.insertAdjacentElement("afterbegin", imgBackground4);
+temperatureDiv.insertAdjacentElement("afterbegin", iconWeatherTop1);
+temperatureDiv.insertAdjacentElement("afterbegin", iconWeatherTop2);
+temperatureDiv.insertAdjacentElement("afterbegin", iconWeatherTop3);
+temperatureDiv.insertAdjacentElement("afterbegin", iconWeatherTop4);
+searchBtn.insertAdjacentElement("afterbegin", iconSearch);
+leftDay101.insertAdjacentElement("afterbegin", iconDay101);
+leftDay101.insertAdjacentElement("afterbegin", iconDay102);
+leftDay101.insertAdjacentElement("afterbegin", iconDay103);
+leftDay101.insertAdjacentElement("afterbegin", iconDay104);
+leftDay201.insertAdjacentElement("afterbegin", iconDay201);
+leftDay201.insertAdjacentElement("afterbegin", iconDay202);
+leftDay201.insertAdjacentElement("afterbegin", iconDay203);
+leftDay201.insertAdjacentElement("afterbegin", iconDay204);
+leftDay301.insertAdjacentElement("afterbegin", iconDay301);
+leftDay301.insertAdjacentElement("afterbegin", iconDay302);
+leftDay301.insertAdjacentElement("afterbegin", iconDay303);
+leftDay301.insertAdjacentElement("afterbegin", iconDay304);
+leftDay401.insertAdjacentElement("afterbegin", iconDay401);
+leftDay401.insertAdjacentElement("afterbegin", iconDay402);
+leftDay401.insertAdjacentElement("afterbegin", iconDay403);
+leftDay401.insertAdjacentElement("afterbegin", iconDay404);
+leftDay501.insertAdjacentElement("afterbegin", iconDay501);
+leftDay501.insertAdjacentElement("afterbegin", iconDay502);
+leftDay501.insertAdjacentElement("afterbegin", iconDay503);
+leftDay501.insertAdjacentElement("afterbegin", iconDay504);
 
 function runIconImg(data) {
   switch (data.main) {

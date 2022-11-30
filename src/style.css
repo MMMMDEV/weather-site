@@ -144,7 +144,7 @@ form {
   width: 120px;
   height: 25px;
   border: 0px solid transparent;
-  border-bottom: 1px solid var(--white-color);
+  border-bottom: 2px solid var(--white-color);
   background-color: transparent;
   color: var(--white-color);
   font-size: 1.1rem;
@@ -234,15 +234,17 @@ form {
   width: calc(var(--day-date-width) * 2);
 }
 
-#iconDay101,
-#iconDay102,
-#iconDay103 {
+.iconDay101,
+.iconDay102,
+.iconDay103,
+.iconday104 {
   left: calc((var(--day-date-width) * 3) + 35px);
 }
 
-#iconDay201,
-#iconDay202,
-#iconDay203 {
+.iconDay201,
+.iconDay202,
+.iconDay203,
+.iconday204 {
   left: calc((var(--day-date-width) * 4) + 35px);
 }
 
@@ -425,15 +427,17 @@ a:visited {
     left: calc(var(--day-date-width) * 4.5);
   }
 
-  #iconDay101,
-  #iconDay102,
-  #iconDay103 {
+  .iconDay101,
+  .iconDay102,
+  .iconDay103,
+  .iconday104 {
     left: calc((var(--day-date-width) * 5) + 40px);
   }
 
-  #iconDay201,
-  #iconDay202,
-  #iconDay203 {
+  .iconDay201,
+  .iconDay202,
+  .iconDay203,
+  .iconday204 {
     left: calc((var(--day-date-width) * 6) + 65px);
   }
 
@@ -551,15 +555,17 @@ a:visited {
     left: calc(var(--day-date-width) * 5);
   }
 
-  #iconDay101,
-  #iconDay102,
-  #iconDay103 {
+  .iconDay101,
+  .iconDay102,
+  .iconDay103,
+  .iconday104 {
     left: calc((var(--day-date-width) * 5) + 50px);
   }
 
-  #iconDay201,
-  #iconDay202,
-  #iconDay203 {
+  .iconDay201,
+  .iconDay202,
+  .iconDay203,
+  .iconday204 {
     left: calc((var(--day-date-width) * 6) + 75px);
   }
 
@@ -603,15 +609,17 @@ a:visited {
     padding: 0px 60px;
   }
 
-  #iconDay101,
-  #iconDay102,
-  #iconDay103 {
+  .iconDay101,
+  .iconDay102,
+  .iconDay103,
+  .iconday104 {
     left: calc((var(--day-date-width) * 6) + 70px);
   }
 
-  #iconDay201,
-  #iconDay202,
-  #iconDay203 {
+  .iconDay201,
+  .iconDay202,
+  .iconDay203,
+  .iconday204 {
     left: calc((var(--day-date-width) * 7) + 90px);
   }
 
@@ -735,15 +743,17 @@ a:visited {
     left: calc(var(--day-date-width) * 7);
   }
 
-  #iconDay101,
-  #iconDay102,
-  #iconDay103 {
+  .iconDay101,
+  .iconDay102,
+  .iconDay103,
+  .iconday104 {
     left: calc((var(--day-date-width) * 7) + 65px);
   }
 
-  #iconDay201,
-  #iconDay202,
-  #iconDay203 {
+  .iconDay201,
+  .iconDay202,
+  .iconDay203,
+  .iconday204 {
     left: calc((var(--day-date-width) * 8) + 100px);
   }
 
