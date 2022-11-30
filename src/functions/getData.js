@@ -4,7 +4,7 @@ import { DateTime } from "luxon";
 async function getlat(city) {
   try {
     const response = await fetch(
-      "http://api.openweathermap.org/geo/1.0/direct?q=" +
+      "https://api.openweathermap.org/geo/1.0/direct?q=" +
         city +
         "&limit=5&appid=65b4f2531fb54aa7d25841b15aca82ff"
     );
@@ -18,7 +18,7 @@ async function getlat(city) {
 async function getlon(city) {
   try {
     const response = await fetch(
-      "http://api.openweathermap.org/geo/1.0/direct?q=" +
+      "https://api.openweathermap.org/geo/1.0/direct?q=" +
         city +
         "&limit=5&appid=65b4f2531fb54aa7d25841b15aca82ff"
     );
