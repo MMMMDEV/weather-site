@@ -312,6 +312,12 @@ a:visited {
 
 /* mobile landscape */
 
+@media only screen and (height < 400px) and (width < 500px) {
+  :root {
+    --bottom-height: 700px;
+  }
+}
+
 @media only screen and (width > 500px) and (height < 500px) {
   :root {
     --top-height: 100vh;
